@@ -2,8 +2,8 @@ import azure.functions as func
 import datetime
 import json
 import logging
-from openai import AzureOpenAI
-from azure.identity import DefaultAzureCredential
+# from openai import AzureOpenAI
+# from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 app = func.FunctionApp()
 
