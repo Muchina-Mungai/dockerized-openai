@@ -29,14 +29,14 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      # - name: Create and start virtual environment
-        # run: |
-          # python3 -m venv venv
-          # source venv/bin/activate
+      - name: Create and start virtual environment
+        run: |
+          python3 -m venv venv
+          source venv/bin/activate
 
       - name: Install dependencies
         run:  |
-          source bin/activate
+          source venv/bin/activate
           pip install -r requirements.txt
 
       # Optional: Add step to run tests here
@@ -74,6 +74,4 @@ jobs:
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA255C0D4D6C4985AF9E648248F72A1E }}
           sku: 'flexconsumption'
-          scm-do-build-during-deployment: true
-          enable-oryx-build: true 
         
