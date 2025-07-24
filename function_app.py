@@ -2,7 +2,9 @@ import azure.functions as func
 import datetime
 import json
 import logging
-
+from openai import AzureOpenAI
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
 app = func.FunctionApp()
 
 @app.route(route="dockerized_openai", auth_level=func.AuthLevel.ANONYMOUS)
