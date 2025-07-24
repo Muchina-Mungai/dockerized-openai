@@ -3,3 +3,4 @@
 # azure-monitor-opentelemetry 
 
 azure-functions
+azure-keyvault-secrets==4.10.0
