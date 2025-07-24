@@ -5,4 +5,3 @@
 azure-functions
 openai
 azure.identity
-azure.keyvault.secrets
